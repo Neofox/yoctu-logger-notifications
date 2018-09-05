@@ -4,7 +4,7 @@ Send notification to your desktop for Yoctu/logger service
 ### Prerequisites
 
 #### General
-This project use Node.JS\
+This project require Node.JS >=9.0\
 This project has been created for the service [logger](https://github.com/flash-global/logger-client)
 
 You'll need a licence for logger. see https://www.yoctu.com/ for more informations.
