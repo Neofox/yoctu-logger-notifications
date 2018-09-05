@@ -1,11 +1,7 @@
 const config = require('config');
 
-const server_url = config.get('server.url');
-const port_web = config.get('server.port.web');
-const port_ws = config.get('server.port.websocket');
-
 const notifier = require('node-notifier');
-const socket = require('socket.io-client')(server_url + ':' + port_ws + '/logger');
+const socket = require('socket.io-client')(config.get('server.websocket.url') + ':' + config.get('server.websocket.port') + '/logger');
 
 socket.on('connect', () => {
 	notifier.notify({title: 'Logger WS', message: "Connected"})
@@ -31,9 +27,9 @@ socket.on('logger.notification.create', (data) => {
 	notifier.notify({
 	  title: `New log (${notification.level_label})`,
 	  message: notification.message,
-	  open: server_url + ':' + port_web + '?notification_id=' + notification.id,
+	  open: config.get('server.http.url') + ':' + config.get('server.http.port') + '?notification_id=' + notification.id,
 	  icon: img,
-	  timeout: 3
+	  timeout: 5
 	});
 }); 
 

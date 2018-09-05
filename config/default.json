@@ -1,9 +1,12 @@
 {
   "server": {
-    "url": "http://v-1533732947-638.dev.yoctu.ovh",
-    "port": {
-      "web": 8001,
-      "websocket": 3000
+    "http": {
+      "url": "http://v-1533732947-638.dev.yoctu.ovh",
+      "port": 8001
+    },
+    "websocket": {
+      "url": "http://v-1533732947-638.dev.yoctu.ovh",
+      "port": 3000
     }
   }
 }
