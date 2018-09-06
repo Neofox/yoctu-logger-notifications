@@ -8,5 +8,8 @@
       "url": "http://v-1533732947-638.dev.yoctu.ovh",
       "port": 3000
     }
+  },
+  "filter": {
+    "namespace": "/choucroute"
   }
 }

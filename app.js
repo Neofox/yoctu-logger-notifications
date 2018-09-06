@@ -23,6 +23,9 @@ socket.on('logger.notification.create', (data) => {
 			break;
     }
 
+    if (!notification.namespace.includes(config.get('filter.namespace'))) {
+    	return;
+	}
 
 	notifier.notify({
 	  title: `New log (${notification.level_label})`,
