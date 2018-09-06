@@ -3,10 +3,17 @@ Send notification to your desktop for Yoctu/logger service
 
 ### Prerequisites
 
-This project use Node.JS\
+#### General
+This project require Node.JS >=9.0\
 This project has been created for the service [logger](https://github.com/flash-global/logger-client)
 
 You'll need a licence for logger. see https://www.yoctu.com/ for more informations.
+
+#### Receiving notifications
+- macOS: >= 10.8 for native notifications, or Growl if earlier.
+- Linux: notify-osd or libnotify-bin installed (Ubuntu should have this by default)
+- Windows: >= 8, or task bar balloons for Windows < 8. Growl as fallback. Growl takes precedence over Windows balloons.
+- General Fallback: Growl
 
 ## Configuration
 
